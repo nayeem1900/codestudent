@@ -16,14 +16,14 @@ use App\Role_action;
 
 class AssignSubjectController extends Controller
 {
-
+/*
     function __construct()
     {
         $this->middleware('assign_subject:assign_subject-list|add-assign-subject mnjk |product-edit|product-delete', ['only' => ['index','show']]);
         $this->middleware('permission:product-create', ['only' => ['create','store']]);
         $this->middleware('permission:product-edit', ['only' => ['edit','update']]);
         $this->middleware('permission:product-delete', ['only' => ['destroy']]);
-    }
+    }*/
 
 
 
@@ -133,6 +133,7 @@ class AssignSubjectController extends Controller
 
 
     public function details($class_id){
+        $access_action = Role_action::orderBy('id', 'ASC')->where('id', '=', Auth::user()->role_id)->first();
         $access = Role::orderBy('id', 'ASC')->where('id', '=', Auth::user()->role_id)->first();
         if($access->manage_setup && $access_action->assign_subject_act){
         $data['editData']=AssignSubject::where ('class_id',$class_id)->get();
