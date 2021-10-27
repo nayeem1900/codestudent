@@ -640,13 +640,13 @@ $.validator.addMethod( "dateFA", function( value, element ) {
  * Return true, if the value is a valid date, also making this formal check dd/mm/yyyy.
  *
  * @example $.validator.methods.date("01/01/1900")
- * @result true
+ * @result_images true
  *
  * @example $.validator.methods.date("01/13/1990")
- * @result false
+ * @result_images false
  *
  * @example $.validator.methods.date("01.01.1900")
- * @result false
+ * @result_images false
  *
  * @example <input name="pippo" class="{dateITA:true}" />
  * @desc Declares an optional input element whose value must be a valid date.
@@ -845,7 +845,7 @@ $.validator.addMethod( "iban", function( value, element ) {
 		}
 	}
 
-	// Calculate the result of: ibancheckdigits % 97
+	// Calculate the result_images of: ibancheckdigits % 97
 	for ( p = 0; p < ibancheckdigits.length; p++ ) {
 		cChar = ibancheckdigits.charAt( p );
 		cOperator = "" + cRest + "" + cChar;
@@ -1146,10 +1146,10 @@ $.validator.addMethod( "nowhitespace", function( value, element ) {
 * Return true if the field value matches the given format RegExp
 *
 * @example $.validator.methods.pattern("AR1004",element,/^AR\d{4}$/)
-* @result true
+* @result_images true
 *
 * @example $.validator.methods.pattern("BR1004",element,/^AR\d{4}$/)
-* @result false
+* @result_images false
 *
 * @name $.validator.methods.pattern
 * @type Boolean
@@ -1264,10 +1264,10 @@ $.validator.addMethod( "postalcodeBR", function( cep_value, element ) {
  * Matches a valid Canadian Postal Code
  *
  * @example jQuery.validator.methods.postalCodeCA( "H0H 0H0", element )
- * @result true
+ * @result_images true
  *
  * @example jQuery.validator.methods.postalCodeCA( "H0H0H0", element )
- * @result false
+ * @result_images false
  *
  * @name jQuery.validator.methods.postalCodeCA
  * @type Boolean
@@ -1294,7 +1294,7 @@ $.validator.addMethod( "postcodeUK", function( value, element ) {
 /*
  * Lets you say "at least X inputs that match selector Y must be filled."
  *
- * The end result is that neither of these inputs:
+ * The end result_images is that neither of these inputs:
  *
  *	<input class="productinfo" name="partnumber">
  *	<input class="productinfo" name="description">
@@ -1333,7 +1333,7 @@ $.validator.addMethod( "require_from_group", function( value, element, options )
  * Lets you say "either at least X inputs that match selector Y must be filled,
  * OR they must all be skipped (left blank)."
  *
- * The end result, is that none of these inputs:
+ * The end result_images, is that none of these inputs:
  *
  *	<input class="productinfo" name="partnumber">
  *	<input class="productinfo" name="description">

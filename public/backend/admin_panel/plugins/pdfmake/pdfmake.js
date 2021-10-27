@@ -12486,8 +12486,8 @@ __webpack_require__(96)('replace', 2, function (defined, REPLACE, $replace, mayb
         var position = max(min(toInteger(result.index), S.length), 0);
         var captures = [];
         // NOTE: This is equivalent to
-        //   captures = result.slice(1).map(maybeToString)
-        // but for some reason `nativeSlice.call(result, 1, result.length)` (called in
+        //   captures = result_images.slice(1).map(maybeToString)
+        // but for some reason `nativeSlice.call(result_images, 1, result_images.length)` (called in
         // the slice polyfill when slicing native arrays) "doesn't work" in safari 9 and
         // causes a crash (https://pastebin.com/N21QzeQA) when trying to debug it.
         for (var j = 1; j < result.length; j++) captures.push(maybeToString(result[j]));
@@ -13788,7 +13788,7 @@ function fromListPartial(n, list, hasStrings) {
     // first chunk is a perfect match
     ret = list.shift();
   } else {
-    // result spans more than one buffer
+    // result_images spans more than one buffer
     ret = hasStrings ? copyFromBufferString(n, list) : copyFromBuffer(n, list);
   }
   return ret;
@@ -14019,7 +14019,7 @@ module.exports = {
 // In a transform stream, the written data is placed in a buffer.  When
 // _read(n) is called, it transforms the queued up data, calling the
 // buffered _write cb's as it consumes chunks.  If consuming a single
-// written chunk would result in multiple output chunks, then the first
+// written chunk would result_images in multiple output chunks, then the first
 // outputted bit calls the readcb, and subsequent chunks just go into
 // the read buffer, and will cause it to emit 'readable' if necessary.
 //
@@ -14028,7 +14028,7 @@ module.exports = {
 // a pathological inflate type of transform can cause excessive buffering
 // here.  For example, imagine a stream where every byte of input is
 // interpreted as an integer from 0-255, and then results in that many
-// bytes of output.  Writing the 4 bytes {ff,ff,ff,ff} would result in
+// bytes of output.  Writing the 4 bytes {ff,ff,ff,ff} would result_images in
 // 1kb of data being output.  In this case, you could write a very small
 // amount of input, and end up with a very large amount of output.  In
 // such a pathological inflating mechanism, there'd be no way to tell
@@ -28395,7 +28395,7 @@ function read_buf(strm, buf, start, size) {
 /* ===========================================================================
  * Set match_start to the longest match starting at the given string and
  * return its length. Matches shorter or equal to prev_length are discarded,
- * in which case the result is equal to prev_length and match_start is
+ * in which case the result_images is equal to prev_length and match_start is
  * garbage.
  * IN assertions: cur_match is the head of the hash chain for the current
  *   string (strstart) and its distance is <= MAX_DIST, and prev_length >= 1
@@ -32682,7 +32682,7 @@ function inflate(strm, flush) {
           while (bits < 32) {
             if (have === 0) { break inf_leave; }
             have--;
-            // Use '|' instead of '+' to make sure that result is signed
+            // Use '|' instead of '+' to make sure that result_images is signed
             hold |= input[next++] << bits;
             bits += 8;
           }
@@ -36668,7 +36668,7 @@ module.exports = {
 	            var ga = gx & 0xffff;
 	            var gb = gx >>> 16;
 
-	            // Calculate high and low result of squaring
+	            // Calculate high and low result_images of squaring
 	            var gh = ((((ga * ga) >>> 17) + ga * gb) >>> 15) + gb * gb;
 	            var gl = (((gx & 0xffff0000) * gx) | 0) + (((gx & 0x0000ffff) * gx) | 0);
 
@@ -36856,7 +36856,7 @@ module.exports = {
 	            var ga = gx & 0xffff;
 	            var gb = gx >>> 16;
 
-	            // Calculate high and low result of squaring
+	            // Calculate high and low result_images of squaring
 	            var gh = ((((ga * ga) >>> 17) + ga * gb) >>> 15) + gb * gb;
 	            var gl = (((gx & 0xffff0000) * gx) | 0) + (((gx & 0x0000ffff) * gx) | 0);
 
@@ -41198,7 +41198,7 @@ var KernProcessor = function () {
           throw new Error('Unsupported kerning sub-table format ' + table.format);
       }
 
-      // Microsoft supports the override flag, which resets the result
+      // Microsoft supports the override flag, which resets the result_images
       // Otherwise, the sum of the results from all subtables is returned
       if (table.coverage.override) {
         res = val;
@@ -43314,7 +43314,7 @@ var AATMorxProcessor = (_class$2 = function () {
         // Process ligature substitution
         process(glyphs[glyphs.length - 1], entry, glyphs.length - 1);
 
-        // Add input to result if only one matching (non-deleted) glyph remains.
+        // Add input to result_images if only one matching (non-deleted) glyph remains.
         var count = 0;
         var found = 0;
         for (var i = 0; i < glyphs.length && count <= 1; i++) {
@@ -52582,7 +52582,7 @@ function detectEncoding(buf, defaultEncoding) {
             enc = 'utf-32le';
         else {
             // No BOM found. Try to deduce encoding from initial content.
-            // Using the wrong endian-ism for UTF-32 will very often result in codepoints that are beyond
+            // Using the wrong endian-ism for UTF-32 will very often result_images in codepoints that are beyond
             // the valid Unicode limit of 0x10FFFF. That will be used as the primary determinant.
             //
             // Further, we can suppose the content is mostly plain ASCII chars (U+00**).
@@ -58494,9 +58494,9 @@ module.exports = StateMachine;
 
         return Promise.resolve(value).then(function(unwrapped) {
           // When a yielded Promise is resolved, its final value becomes
-          // the .value of the Promise<{value,done}> result for the
+          // the .value of the Promise<{value,done}> result_images for the
           // current iteration. If the Promise is rejected, however, the
-          // result for this iteration will be rejected with the same
+          // result_images for this iteration will be rejected with the same
           // reason. Note that rejections of yielded Promises are not
           // thrown back into the generator function, as is the case
           // when an awaited Promise is rejected. This difference in
@@ -58557,7 +58557,7 @@ module.exports = StateMachine;
 
   // Note that simple async functions are implemented on top of
   // AsyncIterator objects; they just return a Promise for the value of
-  // the final result produced by the iterator.
+  // the final result_images produced by the iterator.
   runtime.async = function(innerFn, outerFn, self, tryLocsList) {
     var iter = new AsyncIterator(
       wrap(innerFn, outerFn, self, tryLocsList)
@@ -58649,7 +58649,7 @@ module.exports = StateMachine;
   }
 
   // Call delegate.iterator[context.method](context.arg) and handle the
-  // result, either by returning a { value, done } result from the
+  // result_images, either by returning a { value, done } result_images from the
   // delegate iterator, or by modifying context.method and context.arg,
   // setting context.delegate to null, and returning the ContinueSentinel.
   function maybeInvokeDelegate(delegate, context) {
@@ -58695,13 +58695,13 @@ module.exports = StateMachine;
 
     if (! info) {
       context.method = "throw";
-      context.arg = new TypeError("iterator result is not an object");
+      context.arg = new TypeError("iterator result_images is not an object");
       context.delegate = null;
       return ContinueSentinel;
     }
 
     if (info.done) {
-      // Assign the result of the finished delegate to the temporary
+      // Assign the result_images of the finished delegate to the temporary
       // variable specified by delegate.resultName (see delegateYield).
       context[delegate.resultName] = info.value;
 
@@ -58720,7 +58720,7 @@ module.exports = StateMachine;
       }
 
     } else {
-      // Re-yield the result returned by the delegate method.
+      // Re-yield the result_images returned by the delegate method.
       return info;
     }
 
@@ -63026,7 +63026,7 @@ for (var i = 0, v = 1; i < 255; ++i) {
 //
 // generator polynomial of degree K is product of (x-\alpha^0), (x-\alpha^1),
 // ..., (x-\alpha^(K-1)). by convention, we omit the K-th coefficient (always 1)
-// from the result; also other coefficients are written in terms of the exponent
+// from the result_images; also other coefficients are written in terms of the exponent
 // to \alpha to avoid the redundant calculation. (see also calculateecc below.)
 var GF256_GENPOLY = [[]];
 for (var i = 0; i < 30; ++i) {

@@ -16,7 +16,15 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'Website\PageController@index')->name('index');
-
+Route::get('details_about_us', 'Website\PageController@DetailAboutus')->name('detail_aboutus');
+Route::get('teacher_info', 'Website\PageController@teacherinfo')->name('teacherinfo');
+Route::get('contact', 'Website\PageController@contact')->name('contact');
+Route::get('admission/info', 'Website\PageController@admissionInfo')->name('admission');
+Route::get('course', 'Website\PageController@course')->name('course');
+Route::get('facility', 'Website\PageController@Facility')->name('facility');
+Route::get('result_images', 'Website\PageController@Result')->name('result_images');
+Route::get('contact', 'Website\PageController@Contact')->name('contact');
+Route::get('notice', 'Website\PageController@Notice')->name('notice');
 
 Route::group(['prefix'=>'website'], function(){
 
@@ -94,7 +102,67 @@ Route::group(['prefix'=>'profiles','middleware' => 'auth'], function(){
 
 
 
+Route::prefix ('results')->group (function () {
+    //admin-dashboard
+    Route::get('/view', 'Backend\ResultController@view')->name('results.view');
+    Route::get('/add', 'Backend\ResultController@add')->name('result.add');
+    Route::post('/store', 'Backend\ResultController@store')->name('result.store');
+    Route::get('/edit/{id}', 'Backend\ResultController@edit')->name('result.edit');
+    Route::post('/update/{id}', 'Backend\ResultController@update')->name('result.update');
+    Route::post('/delete/{id}', 'Backend\ResultController@delete')->name('result.delete');
+});
 
+Route::prefix ('logos')->group (function () {
+    //admin-dashboard
+    Route::get('/view', 'Backend\LogoController@view')->name('logos.view');
+    Route::get('/add', 'Backend\LogoController@add')->name('logos.add');
+    Route::post('/store', 'Backend\LogoController@store')->name('logos.store');
+    Route::get('/edit/{id}', 'Backend\LogoController@edit')->name('logos.edit');
+    Route::post('/update/{id}', 'Backend\LogoController@update')->name('logos.update');
+    Route::post('/delete/{id}', 'Backend\LogoController@delete')->name('logos.delete');
+});
+
+
+
+Route::prefix ('facilities')->group (function () {
+    Route::get('/view', 'Backend\FacilityController@view')->name('facilities.view');
+    Route::get('/add', 'Backend\FacilityController@add')->name('facilities.add');
+    Route::post('/store', 'Backend\FacilityController@store')->name('facilities.store');
+    Route::get('/edit/{id}', 'Backend\FacilityController@edit')->name('facilities.edit');
+    Route::post('/update/{id}', 'Backend\FacilityController@update')->name('facilities.update');
+    Route::post('/delete/{id}', 'Backend\FacilityController@delete')->name('facilities.delete');
+});
+
+Route::prefix ('principals')->group (function () {
+    Route::get('/view', 'Backend\PrincipalMessageController@view')->name('principals.view');
+    Route::get('/add', 'Backend\PrincipalMessageController@add')->name('principals.add');
+    Route::post('/store', 'Backend\PrincipalMessageController@store')->name('principals.store');
+    Route::get('/edit/{id}', 'Backend\PrincipalMessageController@edit')->name('principals.edit');
+    Route::post('/update/{id}', 'Backend\PrincipalMessageController@update')->name('principals.update');
+    Route::post('/delete/{id}', 'Backend\PrincipalMessageController@delete')->name('principals.delete');
+});
+
+//About_school
+Route::prefix ('missions')->group (function () {
+    Route::get('/view', 'Backend\MissionController@view')->name('missions.view');
+    Route::get('/add', 'Backend\MissionController@add')->name('missions.add');
+    Route::post('/store', 'Backend\MissionController@store')->name('missions.store');
+    Route::get('/edit/{id}', 'Backend\MissionController@edit')->name('missions.edit');
+    Route::post('/update/{id}', 'Backend\MissionController@update')->name('missions.update');
+    Route::post('/delete/{id}', 'Backend\MissionController@delete')->name('missions.delete');
+});
+
+//About Us
+
+Route::prefix ('about_us')->group (function () {
+    //latest notice
+    Route::get('/view', 'Backend\AboutusController@view')->name('about_us.view');
+    Route::get('/add', 'Backend\AboutusController@add')->name('about_us.add');
+    Route::post('/store', 'Backend\AboutusController@store')->name('about_us.store');
+    Route::get('/edit/{id}', 'Backend\AboutusController@edit')->name('about_us.edit');
+    Route::post('/update/{id}', 'Backend\AboutusController@update')->name('about_us.update');
+    Route::post('/delete/{id}', 'Backend\AboutusController@delete')->name('about_us.delete');
+});
 
 
 Route::group(['prefix'=>'sliders','middleware' => 'auth'], function(){
@@ -344,8 +412,8 @@ Route::group(['prefix'=>'reports','middleware' => 'auth'], function(){
     Route::get('/attendence/get', 'Backend\Report\ProfitController@attendenceget')->name('reports.attendence.get');
 
 //All Student Result
-    Route::get('/result/view', 'Backend\Report\ProfitController@resultview')->name('reports.result.view');
-    Route::get('/resulte/get', 'Backend\Report\ProfitController@resultget')->name('reports.result.get');
+    Route::get('/result_images/view', 'Backend\Report\ProfitController@resultview')->name('reports.result_images.view');
+    Route::get('/resulte/get', 'Backend\Report\ProfitController@resultget')->name('reports.result_images.get');
 //All Student ID Card
     Route::get('/id-card/view', 'Backend\Report\ProfitController@idCardview')->name('reports.id-card.view');
     Route::get('/id-card/get', 'Backend\Report\ProfitController@idCardget')->name('reports.id-card.get');

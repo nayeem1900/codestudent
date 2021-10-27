@@ -3756,7 +3756,7 @@ function () {
      *
      * [workaround] for old jQuery
      * passing an array of style properties to .css()
-     * will result in an object of property-value pairs.
+     * will result_images in an object of property-value pairs.
      * (compability with version < 1.9)
      *
      * @private

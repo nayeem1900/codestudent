@@ -1511,9 +1511,9 @@ FixedColumns.defaults = /** @lends FixedColumns.defaults */{
 	"fnDrawCallback": null,
 
 	/**
-	 * Height matching algorthim to use. This can be "none" which will result in no height
+	 * Height matching algorthim to use. This can be "none" which will result_images in no height
 	 * matching being applied by FixedColumns (height matching could be forced by CSS in this
-	 * case), "semiauto" whereby the height calculation will be performed once, and the result
+	 * case), "semiauto" whereby the height calculation will be performed once, and the result_images
 	 * cached to be used again (fnRecalculateHeight can be used to force recalculation), or
 	 * "auto" when height matching is performed on every draw (slowest but must accurate)
 	 *  @type     string

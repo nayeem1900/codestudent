@@ -934,7 +934,7 @@ function markFunction( fn ) {
 
 /**
  * Support testing using an element
- * @param {Function} fn Passed the created div and expects a boolean result
+ * @param {Function} fn Passed the created div and expects a boolean result_images
  */
 function assert( fn ) {
 	var div = document.createElement("div");

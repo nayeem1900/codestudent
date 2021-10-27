@@ -430,12 +430,12 @@
                     </li>
                     @endif
                     @if($access_submenu->student_result)
-                    <li class="nav-item">
+                   {{-- <li class="nav-item">
                         <a href="{{route('reports.result.view')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Student Result</p>
                         </a>
-                    </li>
+                    </li>--}}
                     @endif
                     @if($access_submenu->student_id_card)
                     <li class="nav-item">
@@ -482,6 +482,143 @@
 
 
 
+            @if($access->role_management)
+                <li class="nav-item has-treeview">
+                    <a href="" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            About_us
+                            <i class="fas fa-angle-left right"></i>
+
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+
+                        @if($access_submenu->role_permission)
+                            <li class="nav-item">
+                                <a href="{{ route('missions.view') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p> About_usn</p>
+                                </a>
+                            </li>
+                        @endif
+
+
+
+                    </ul>
+                </li>
+            @endif
+
+
+            @if($access->role_management)
+                <li class="nav-item has-treeview">
+                    <a href="" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            Principal Message
+                            <i class="fas fa-angle-left right"></i>
+
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+
+                        @if($access_submenu->role_permission)
+                            <li class="nav-item">
+                                <a href="{{ route('principals.view') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Principal_message</p>
+                                </a>
+                            </li>
+                        @endif
+
+
+
+                    </ul>
+                </li>
+            @endif
+
+            @if($access->role_management)
+                <li class="nav-item has-treeview">
+                    <a href="" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            Facility
+                            <i class="fas fa-angle-left right"></i>
+
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+
+                        @if($access_submenu->role_permission)
+                            <li class="nav-item">
+                                <a href="{{ route('facilities.view') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Facility</p>
+                                </a>
+                            </li>
+                        @endif
+
+
+
+                    </ul>
+                </li>
+            @endif
+
+
+            @if($access->role_management)
+                <li class="nav-item has-treeview">
+                    <a href="" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                           Manage Logo
+                            <i class="fas fa-angle-left right"></i>
+
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+
+                        @if($access_submenu->role_permission)
+                            <li class="nav-item">
+                                <a href="{{ route('logos.view') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Logo</p>
+                                </a>
+                            </li>
+                        @endif
+
+
+
+                    </ul>
+                </li>
+            @endif
+
+
+            @if($access->role_management)
+                <li class="nav-item has-treeview">
+                    <a href="" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            Manage Result Notice
+                            <i class="fas fa-angle-left right"></i>
+
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+
+                        @if($access_submenu->role_permission)
+                            <li class="nav-item">
+                                <a href="{{ route('results.view') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Result</p>
+                                </a>
+                            </li>
+                        @endif
+
+
+
+                    </ul>
+                </li>
+            @endif
 
 
     </ul>

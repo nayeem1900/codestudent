@@ -103,9 +103,9 @@ class SliderController extends Controller
             //if it is parent Brand delete sub Brand
 
 
-            if (file_exists('public/upload/logo_images/'.$slider->image) AND! empty($slider->image))
+            if (file_exists('upload/slider_images/'.$slider->image) AND! empty($slider->image))
             {
-                unlink('public/upload/logo_images/'.$slider->image);
+                unlink('upload/slider_images/'.$slider->image);
             }
 
             $slider->delete();

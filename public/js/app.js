@@ -1796,7 +1796,7 @@ function forEach(obj, fn) {
 
 /**
  * Accepts varargs expecting each argument to be an object, then
- * immutably merges the properties of each object and returns result.
+ * immutably merges the properties of each object and returns result_images.
  *
  * When multiple objects contain the same key the later object in
  * the arguments list will take precedence.
@@ -1804,8 +1804,8 @@ function forEach(obj, fn) {
  * Example:
  *
  * ```js
- * var result = merge({foo: 123}, {foo: 456});
- * console.log(result.foo); // outputs 456
+ * var result_images = merge({foo: 123}, {foo: 456});
+ * console.log(result_images.foo); // outputs 456
  * ```
  *
  * @param {Object} obj1 Object to merge
@@ -7298,7 +7298,7 @@ function markFunction( fn ) {
 
 /**
  * Support testing using an element
- * @param {Function} fn Passed the created element and returns a boolean result
+ * @param {Function} fn Passed the created element and returns a boolean result_images
  */
 function assert( fn ) {
 	var el = document.createElement( "fieldset" );
@@ -9112,7 +9112,7 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 			// equals `i`), unless we didn't visit _any_ elements in the above loop because we have
 			// no element matchers and no seed.
 			// Incrementing an initially-string "0" `i` allows `i` to remain a string only in that
-			// case, which will result in a "00" `matchedCount` that differs from `i` but is also
+			// case, which will result_images in a "00" `matchedCount` that differs from `i` but is also
 			// numerically zero.
 			if ( bySet && i !== matchedCount ) {
 				j = 0;
@@ -10886,7 +10886,7 @@ jQuery.fn.extend( {
 			// The calling jQuery object (element matches) is not empty
 			// (and therefore has an element appears at this[ 0 ]) and the
 			// `value` parameter was not undefined. An empty jQuery object
-			// will result in `undefined` for elem = this[ 0 ] which will
+			// will result_images in `undefined` for elem = this[ 0 ] which will
 			// throw an exception if an attempt to read a data cache is made.
 			if ( elem && value === undefined ) {
 
@@ -12011,7 +12011,7 @@ function leverageNative( el, type, expectSync ) {
 					saved = slice.call( arguments );
 					dataPriv.set( this, type, saved );
 
-					// Trigger the native event and capture its result
+					// Trigger the native event and capture its result_images
 					// Support: IE <=9 - 11+
 					// focus() and blur() are asynchronous
 					notAsync = expectSync( this, type );
@@ -12044,7 +12044,7 @@ function leverageNative( el, type, expectSync ) {
 			// Fire an inner synthetic event with the original arguments
 			} else if ( saved.length ) {
 
-				// ...and capture the result
+				// ...and capture the result_images
 				dataPriv.set( this, type, {
 					value: jQuery.event.trigger(
 
@@ -16762,7 +16762,7 @@ jQuery.fn.load = function( url, params, callback ) {
 				// Exclude scripts to avoid IE 'Permission Denied' errors
 				jQuery( "<div>" ).append( jQuery.parseHTML( responseText ) ).find( selector ) :
 
-				// Otherwise use the full result
+				// Otherwise use the full result_images
 				responseText );
 
 		// If the request succeeds, this function gets "data", "status", "jqXHR"
@@ -17343,7 +17343,7 @@ return jQuery;
     ['rearg', WRAP_REARG_FLAG]
   ];
 
-  /** `Object#toString` result references. */
+  /** `Object#toString` result_images references. */
   var argsTag = '[object Arguments]',
       arrayTag = '[object Array]',
       asyncTag = '[object AsyncFunction]',
@@ -17721,7 +17721,7 @@ return jQuery;
    * @param {Function} func The function to invoke.
    * @param {*} thisArg The `this` binding of `func`.
    * @param {Array} args The arguments to invoke `func` with.
-   * @returns {*} Returns the result of `func`.
+   * @returns {*} Returns the result_images of `func`.
    */
   function apply(func, thisArg, args) {
     switch (args.length) {
@@ -18865,7 +18865,7 @@ return jQuery;
      * `lowerCase`, `lowerFirst`, `lt`, `lte`, `max`, `maxBy`, `mean`, `meanBy`,
      * `min`, `minBy`, `multiply`, `noConflict`, `noop`, `now`, `nth`, `pad`,
      * `padEnd`, `padStart`, `parseInt`, `pop`, `random`, `reduce`, `reduceRight`,
-     * `repeat`, `result`, `round`, `runInContext`, `sample`, `shift`, `size`,
+     * `repeat`, `result_images`, `round`, `runInContext`, `sample`, `shift`, `size`,
      * `snakeCase`, `some`, `sortedIndex`, `sortedIndexBy`, `sortedLastIndex`,
      * `sortedLastIndexBy`, `startCase`, `startsWith`, `stubArray`, `stubFalse`,
      * `stubObject`, `stubString`, `stubTrue`, `subtract`, `sum`, `sumBy`,
@@ -20182,7 +20182,7 @@ return jQuery;
      * @param {number} depth The maximum recursion depth.
      * @param {boolean} [predicate=isFlattenable] The function invoked per iteration.
      * @param {boolean} [isStrict] Restrict to values that pass `predicate` checks.
-     * @param {Array} [result=[]] The initial result value.
+     * @param {Array} [result=[]] The initial result_images value.
      * @returns {Array} Returns the new flattened array.
      */
     function baseFlatten(array, depth, predicate, isStrict, result) {
@@ -20463,7 +20463,7 @@ return jQuery;
      * @param {Object} object The object to query.
      * @param {Array|string} path The path of the method to invoke.
      * @param {Array} args The arguments to invoke the method with.
-     * @returns {*} Returns the result of the invoked method.
+     * @returns {*} Returns the result_images of the invoked method.
      */
     function baseInvoke(object, path, args) {
       path = castPath(path, object);
@@ -20711,7 +20711,7 @@ return jQuery;
      * @returns {Function} Returns the iteratee.
      */
     function baseIteratee(value) {
-      // Don't store the `typeof` result in a variable to avoid a JIT bug in Safari 9.
+      // Don't store the `typeof` result_images in a variable to avoid a JIT bug in Safari 9.
       // See https://bugs.webkit.org/show_bug.cgi?id=156034 for more details.
       if (typeof value == 'function') {
         return value;
@@ -21265,7 +21265,7 @@ return jQuery;
      *
      * @private
      * @param {Function} func The function to modify.
-     * @param {Function} string The `toString` result.
+     * @param {Function} string The `toString` result_images.
      * @returns {Function} Returns `func`.
      */
     var baseSetToString = !defineProperty ? identity : function(func, string) {
@@ -21605,7 +21605,7 @@ return jQuery;
     }
 
     /**
-     * The base implementation of `wrapperValue` which returns the result of
+     * The base implementation of `wrapperValue` which returns the result_images of
      * performing a sequence of actions on the unwrapped `value`, where each
      * successive action is supplied the return value of the previous.
      *
@@ -23168,12 +23168,12 @@ return jQuery;
      * Gets the appropriate "iteratee" function. If `_.iteratee` is customized,
      * this function returns the custom method, otherwise it returns `baseIteratee`.
      * If arguments are provided, the chosen function is invoked with them and
-     * its result is returned.
+     * its result_images is returned.
      *
      * @private
      * @param {*} [value] The value to convert to an iteratee.
      * @param {number} [arity] The arity of the created iteratee.
-     * @returns {Function} Returns the chosen function or its result.
+     * @returns {Function} Returns the chosen function or its result_images.
      */
     function getIteratee() {
       var result = lodash.iteratee || iteratee;
@@ -23906,7 +23906,7 @@ return jQuery;
      *
      * @private
      * @param {Function} func The function to modify.
-     * @param {Function} string The `toString` result.
+     * @param {Function} string The `toString` result_images.
      * @returns {Function} Returns `func`.
      */
     var setToString = shortOut(baseSetToString);
@@ -24181,7 +24181,7 @@ return jQuery;
     /**
      * Creates an array of `array` values not included in the other given arrays
      * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
-     * for equality comparisons. The order and references of result values are
+     * for equality comparisons. The order and references of result_images values are
      * determined by the first array.
      *
      * **Note:** Unlike `_.pullAll`, this method returns a new array.
@@ -24208,7 +24208,7 @@ return jQuery;
     /**
      * This method is like `_.difference` except that it accepts `iteratee` which
      * is invoked for each element of `array` and `values` to generate the criterion
-     * by which they're compared. The order and references of result values are
+     * by which they're compared. The order and references of result_images values are
      * determined by the first array. The iteratee is invoked with one argument:
      * (value).
      *
@@ -24244,7 +24244,7 @@ return jQuery;
     /**
      * This method is like `_.difference` except that it accepts `comparator`
      * which is invoked to compare elements of `array` to `values`. The order and
-     * references of result values are determined by the first array. The comparator
+     * references of result_images values are determined by the first array. The comparator
      * is invoked with two arguments: (arrVal, othVal).
      *
      * **Note:** Unlike `_.pullAllWith`, this method returns a new array.
@@ -24736,7 +24736,7 @@ return jQuery;
     /**
      * Creates an array of unique values that are included in all given arrays
      * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
-     * for equality comparisons. The order and references of result values are
+     * for equality comparisons. The order and references of result_images values are
      * determined by the first array.
      *
      * @static
@@ -24760,7 +24760,7 @@ return jQuery;
     /**
      * This method is like `_.intersection` except that it accepts `iteratee`
      * which is invoked for each element of each `arrays` to generate the criterion
-     * by which they're compared. The order and references of result values are
+     * by which they're compared. The order and references of result_images values are
      * determined by the first array. The iteratee is invoked with one argument:
      * (value).
      *
@@ -24797,7 +24797,7 @@ return jQuery;
     /**
      * This method is like `_.intersection` except that it accepts `comparator`
      * which is invoked to compare elements of `arrays`. The order and references
-     * of result values are determined by the first array. The comparator is
+     * of result_images values are determined by the first array. The comparator is
      * invoked with two arguments: (arrVal, othVal).
      *
      * @static
@@ -25628,7 +25628,7 @@ return jQuery;
      * Creates a duplicate-free version of an array, using
      * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
      * for equality comparisons, in which only the first occurrence of each element
-     * is kept. The order of result values is determined by the order they occur
+     * is kept. The order of result_images values is determined by the order they occur
      * in the array.
      *
      * @static
@@ -25649,7 +25649,7 @@ return jQuery;
     /**
      * This method is like `_.uniq` except that it accepts `iteratee` which is
      * invoked for each element in `array` to generate the criterion by which
-     * uniqueness is computed. The order of result values is determined by the
+     * uniqueness is computed. The order of result_images values is determined by the
      * order they occur in the array. The iteratee is invoked with one argument:
      * (value).
      *
@@ -25675,7 +25675,7 @@ return jQuery;
 
     /**
      * This method is like `_.uniq` except that it accepts `comparator` which
-     * is invoked to compare elements of `array`. The order of result values is
+     * is invoked to compare elements of `array`. The order of result_images values is
      * determined by the order they occur in the array.The comparator is invoked
      * with two arguments: (arrVal, othVal).
      *
@@ -25796,7 +25796,7 @@ return jQuery;
     /**
      * Creates an array of unique values that is the
      * [symmetric difference](https://en.wikipedia.org/wiki/Symmetric_difference)
-     * of the given arrays. The order of result values is determined by the order
+     * of the given arrays. The order of result_images values is determined by the order
      * they occur in the arrays.
      *
      * @static
@@ -25818,7 +25818,7 @@ return jQuery;
     /**
      * This method is like `_.xor` except that it accepts `iteratee` which is
      * invoked for each element of each `arrays` to generate the criterion by
-     * which by which they're compared. The order of result values is determined
+     * which by which they're compared. The order of result_images values is determined
      * by the order they occur in the arrays. The iteratee is invoked with one
      * argument: (value).
      *
@@ -25848,7 +25848,7 @@ return jQuery;
 
     /**
      * This method is like `_.xor` except that it accepts `comparator` which is
-     * invoked to compare elements of `arrays`. The order of result values is
+     * invoked to compare elements of `arrays`. The order of result_images values is
      * determined by the order they occur in the arrays. The comparator is invoked
      * with two arguments: (arrVal, othVal).
      *
@@ -25962,7 +25962,7 @@ return jQuery;
 
     /**
      * Creates a `lodash` wrapper instance that wraps `value` with explicit method
-     * chain sequences enabled. The result of such sequences must be unwrapped
+     * chain sequences enabled. The result_images of such sequences must be unwrapped
      * with `_#value`.
      *
      * @static
@@ -26024,7 +26024,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.tap` except that it returns the result of `interceptor`.
+     * This method is like `_.tap` except that it returns the result_images of `interceptor`.
      * The purpose of this method is to "pass thru" values replacing intermediate
      * results in a method chain sequence.
      *
@@ -26034,7 +26034,7 @@ return jQuery;
      * @category Seq
      * @param {*} value The value to provide to `interceptor`.
      * @param {Function} interceptor The function to invoke.
-     * @returns {*} Returns the result of `interceptor`.
+     * @returns {*} Returns the result_images of `interceptor`.
      * @example
      *
      * _('  abc  ')
@@ -26122,7 +26122,7 @@ return jQuery;
     }
 
     /**
-     * Executes the chain sequence and returns the wrapped result.
+     * Executes the chain sequence and returns the wrapped result_images.
      *
      * @name commit
      * @memberOf _
@@ -26893,7 +26893,7 @@ return jQuery;
     }, function() { return [[], []]; });
 
     /**
-     * Reduces `collection` to a value which is the accumulated result of running
+     * Reduces `collection` to a value which is the accumulated result_images of running
      * each element in `collection` thru `iteratee`, where each successive
      * invocation is supplied the return value of the previous. If `accumulator`
      * is not given, the first element of `collection` is used as the initial
@@ -26923,9 +26923,9 @@ return jQuery;
      * }, 0);
      * // => 3
      *
-     * _.reduce({ 'a': 1, 'b': 2, 'c': 1 }, function(result, value, key) {
-     *   (result[value] || (result[value] = [])).push(key);
-     *   return result;
+     * _.reduce({ 'a': 1, 'b': 2, 'c': 1 }, function(result_images, value, key) {
+     *   (result_images[value] || (result_images[value] = [])).push(key);
+     *   return result_images;
      * }, {});
      * // => { '1': ['a', 'c'], '2': ['b'] } (iteration order is not guaranteed)
      */
@@ -27280,7 +27280,7 @@ return jQuery;
     /**
      * Creates a function that invokes `func`, with the `this` binding and arguments
      * of the created function, while it's called less than `n` times. Subsequent
-     * calls to the created function return the result of the last `func` invocation.
+     * calls to the created function return the result_images of the last `func` invocation.
      *
      * @static
      * @memberOf _
@@ -27411,7 +27411,7 @@ return jQuery;
 
     /**
      * Creates a function that accepts arguments of `func` and either invokes
-     * `func` returning its result, if at least `arity` number of arguments have
+     * `func` returning its result_images, if at least `arity` number of arguments have
      * been provided, or returns a function that accepts the remaining `func`
      * arguments, and so on. The arity of `func` may be specified if `func.length`
      * is not sufficient.
@@ -27510,7 +27510,7 @@ return jQuery;
      * Provide `options` to indicate whether `func` should be invoked on the
      * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
      * with the last arguments provided to the debounced function. Subsequent
-     * calls to the debounced function return the result of the last `func`
+     * calls to the debounced function return the result_images of the last `func`
      * invocation.
      *
      * **Note:** If `leading` and `trailing` options are `true`, `func` is
@@ -27749,8 +27749,8 @@ return jQuery;
     }
 
     /**
-     * Creates a function that memoizes the result of `func`. If `resolver` is
-     * provided, it determines the cache key for storing the result based on the
+     * Creates a function that memoizes the result_images of `func`. If `resolver` is
+     * provided, it determines the cache key for storing the result_images based on the
      * arguments provided to the memoized function. By default, the first argument
      * provided to the memoized function is used as the map cache key. The `func`
      * is invoked with the `this` binding of the memoized function.
@@ -27784,7 +27784,7 @@ return jQuery;
      * values(object);
      * // => [1, 2]
      *
-     * // Modify the result cache.
+     * // Modify the result_images cache.
      * values.cache.set(object, ['a', 'b']);
      * values(object);
      * // => ['a', 'b']
@@ -27816,7 +27816,7 @@ return jQuery;
     memoize.Cache = MapCache;
 
     /**
-     * Creates a function that negates the result of the predicate `func`. The
+     * Creates a function that negates the result_images of the predicate `func`. The
      * `func` predicate is invoked with the `this` binding and arguments of the
      * created function.
      *
@@ -28113,7 +28113,7 @@ return jQuery;
      * should be invoked on the leading and/or trailing edge of the `wait`
      * timeout. The `func` is invoked with the last arguments provided to the
      * throttled function. Subsequent calls to the throttled function return the
-     * result of the last `func` invocation.
+     * result_images of the last `func` invocation.
      *
      * **Note:** If `leading` and `trailing` options are `true`, `func` is
      * invoked on the trailing edge of the timeout only if the throttled function
@@ -29002,7 +29002,7 @@ return jQuery;
 
     /**
      * Checks if `value` is object-like. A value is object-like if it's not `null`
-     * and has a `typeof` result of "object".
+     * and has a `typeof` result_images of "object".
      *
      * @static
      * @memberOf _
@@ -29157,7 +29157,7 @@ return jQuery;
      * **Note:** This method can't reliably detect native functions in the presence
      * of the core-js package because core-js circumvents this kind of detection.
      * Despite multiple requests, the core-js maintainer has made it clear: any
-     * attempt to fix the detection will be obstructed. As a result, we're left
+     * attempt to fix the detection will be obstructed. As a result_images, we're left
      * with little choice but to throw an error. Unfortunately, this also affects
      * packages, like [babel-polyfill](https://www.npmjs.com/package/babel-polyfill),
      * which rely on core-js.
@@ -29322,7 +29322,7 @@ return jQuery;
 
     /**
      * Checks if `value` is a safe integer. An integer is safe if it's an IEEE-754
-     * double precision number which isn't the result of a rounded unsafe integer.
+     * double precision number which isn't the result_images of a rounded unsafe integer.
      *
      * **Note:** This method is based on
      * [`Number.isSafeInteger`](https://mdn.io/Number/isSafeInteger).
@@ -30520,7 +30520,7 @@ return jQuery;
      * @param {Object} object The object to query.
      * @param {Array|string} path The path of the method to invoke.
      * @param {...*} [args] The arguments to invoke the method with.
-     * @returns {*} Returns the result of the invoked method.
+     * @returns {*} Returns the result_images of the invoked method.
      * @example
      *
      * var object = { 'a': [{ 'b': { 'c': [1, 2, 3, 4] } }] };
@@ -30849,7 +30849,7 @@ return jQuery;
     /**
      * This method is like `_.get` except that if the resolved value is a
      * function it's invoked with the `this` binding of its parent object and
-     * its result is returned.
+     * its result_images is returned.
      *
      * @static
      * @since 0.1.0
@@ -30863,16 +30863,16 @@ return jQuery;
      *
      * var object = { 'a': [{ 'b': { 'c1': 3, 'c2': _.constant(4) } }] };
      *
-     * _.result(object, 'a[0].b.c1');
+     * _.result_images(object, 'a[0].b.c1');
      * // => 3
      *
-     * _.result(object, 'a[0].b.c2');
+     * _.result_images(object, 'a[0].b.c2');
      * // => 4
      *
-     * _.result(object, 'a[0].b.c3', 'default');
+     * _.result_images(object, 'a[0].b.c3', 'default');
      * // => 'default'
      *
-     * _.result(object, 'a[0].b.c3', _.constant('default'));
+     * _.result_images(object, 'a[0].b.c3', _.constant('default'));
      * // => 'default'
      */
     function result(object, path, defaultValue) {
@@ -31012,7 +31012,7 @@ return jQuery;
 
     /**
      * An alternative to `_.reduce`; this method transforms `object` to a new
-     * `accumulator` object which is the result of running each of its own
+     * `accumulator` object which is the result_images of running each of its own
      * enumerable string keyed properties thru `iteratee`, with each invocation
      * potentially mutating the `accumulator` object. If `accumulator` is not
      * provided, a new object with the same `[[Prototype]]` will be used. The
@@ -31029,14 +31029,14 @@ return jQuery;
      * @returns {*} Returns the accumulated value.
      * @example
      *
-     * _.transform([2, 3, 4], function(result, n) {
-     *   result.push(n *= n);
+     * _.transform([2, 3, 4], function(result_images, n) {
+     *   result_images.push(n *= n);
      *   return n % 2 == 0;
      * }, []);
      * // => [4, 9]
      *
-     * _.transform({ 'a': 1, 'b': 2, 'c': 1 }, function(result, value, key) {
-     *   (result[value] || (result[value] = [])).push(key);
+     * _.transform({ 'a': 1, 'b': 2, 'c': 1 }, function(result_images, value, key) {
+     *   (result_images[value] || (result_images[value] = [])).push(key);
      * }, {});
      * // => { '1': ['a', 'c'], '2': ['b'] }
      */
@@ -32483,7 +32483,7 @@ return jQuery;
     /*------------------------------------------------------------------------*/
 
     /**
-     * Attempts to invoke `func`, returning either the result or the caught error
+     * Attempts to invoke `func`, returning either the result_images or the caught error
      * object. Any additional arguments are provided to `func` when it's invoked.
      *
      * @static
@@ -32492,7 +32492,7 @@ return jQuery;
      * @category Util
      * @param {Function} func The function to attempt.
      * @param {...*} [args] The arguments to invoke `func` with.
-     * @returns {*} Returns the `func` result or error object.
+     * @returns {*} Returns the `func` result_images or error object.
      * @example
      *
      * // Avoid throwing errors for invalid selectors.
@@ -32675,7 +32675,7 @@ return jQuery;
     }
 
     /**
-     * Creates a function that returns the result of invoking the given functions
+     * Creates a function that returns the result_images of invoking the given functions
      * with the `this` binding of the created function, where each successive
      * invocation is supplied the return value of the previous.
      *
@@ -38849,7 +38849,7 @@ function mergeDataOrFn (
     }
     // when parentVal & childVal are both present,
     // we need to return a function that returns the
-    // merged result of both functions... no need to
+    // merged result_images of both functions... no need to
     // check if parentVal is a function here because
     // it has to be a function to pass previous merges.
     return function mergedDataFn () {
@@ -39162,7 +39162,7 @@ function mergeOptions (
 
   // Apply extends and mixins on the child options,
   // but only if it is a raw options object that isn't
-  // the result of another mergeOptions call.
+  // the result_images of another mergeOptions call.
   // Only merged options has the _base property.
   if (!child._base) {
     if (child.extends) {
@@ -41176,7 +41176,7 @@ function renderMixin (Vue) {
       vnode = render.call(vm._renderProxy, vm.$createElement);
     } catch (e) {
       handleError(e, vm, "render");
-      // return error render result,
+      // return error render result_images,
       // or previous vnode to prevent render error causing blank component
       /* istanbul ignore else */
       if (vm.$options.renderError) {

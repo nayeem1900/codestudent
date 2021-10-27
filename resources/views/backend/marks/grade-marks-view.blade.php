@@ -42,7 +42,7 @@
                             <div class="card-header">
                                 <h3>Grade Point List
                                      @if($access_action->grade_point_act)
-                                    <a class="btn btn-success float-right btn-sm" href="{{route('marks.grade.add')}}"><i class="fa fa-plus-circle"></i> Add Grade Point</a>
+                                    {{--<a class="btn btn-success float-right btn-sm" href="{{route('marks.grade.add')}}"><i class="fa fa-plus-circle"></i> Add Grade Point</a>--}}
                                     @endif
                                 </h3>
 
@@ -87,7 +87,7 @@
                                             <td>{{$value->remarks}}</td>
                                              @if($access_action->grade_point_act)
                                             <td>
-                                                <a href="{{route('marks.grade.edit',$value->id)}}" class="btn btn-info btn-sm" title="Edit"> <i class="fa fa-edit"></i></a>
+                                                {{--<a href="{{route('marks.grade.edit',$value->id)}}" class="btn btn-info btn-sm" title="Edit"> <i class="fa fa-edit"></i></a>--}}
 
                                             </td>
                                             @endif

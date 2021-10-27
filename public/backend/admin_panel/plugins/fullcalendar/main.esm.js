@@ -1555,8 +1555,8 @@ function memoize(workerFunc) {
     };
 }
 /*
-always executes the workerFunc, but if the result is equal to the previous result,
-return the previous result instead.
+always executes the workerFunc, but if the result_images is equal to the previous result_images,
+return the previous result_images instead.
 */
 function memoizeOutput(workerFunc, equalityFunc) {
     var cachedRes = null;
@@ -3470,7 +3470,7 @@ function getDayClasses(date, dateProfile, context, noThemeHighlight) {
     return classes;
 }
 
-// given a function that resolves a result asynchronously.
+// given a function that resolves a result_images asynchronously.
 // the function can either call passed-in success and failure callbacks,
 // or it can return a promise.
 // if you need to pass additional params to func, bind them first.

@@ -1561,8 +1561,8 @@ Docs & License: https://fullcalendar.io/
         };
     }
     /*
-    always executes the workerFunc, but if the result is equal to the previous result,
-    return the previous result instead.
+    always executes the workerFunc, but if the result_images is equal to the previous result_images,
+    return the previous result_images instead.
     */
     function memoizeOutput(workerFunc, equalityFunc) {
         var cachedRes = null;

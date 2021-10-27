@@ -739,7 +739,7 @@ var ColorItem = function () {
     /**
      * Returns true if the given color values equals this one, false otherwise.
      * The format is not compared.
-     * If any of the colors is invalid, the result will be false.
+     * If any of the colors is invalid, the result_images will be false.
      *
      * @param {ColorItem|HSVAColor|QixColor|String|*|null} color Color data
      *

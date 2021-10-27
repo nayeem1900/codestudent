@@ -43,7 +43,7 @@
 
         </div>
 
-        @include('website.layout.down-right-result')
+        @include('result_images')
 
 
 
