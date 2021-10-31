@@ -14,7 +14,14 @@ class CreateNoticesTable extends Migration
     public function up()
     {
         Schema::create('notices', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->date('t_date')->nullable();
+            $table->date('deadline')->nullable();
+            $table->string('title')->nullable();
+            $table->string('t_download')->nullable();
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
+            $table->tinyInteger('status')->default(1)->comment('0=inactive,1=active');
             $table->timestamps();
         });
     }

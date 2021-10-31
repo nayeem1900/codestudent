@@ -17,11 +17,11 @@ class CreateStudentMarksTable extends Migration
             $table->bigIncrements('id');
             $table->integer('student_id')->comment('student_id=user_id');
             $table->string('id_no')->nullable();
-            $table->integer('year_id')->nullabel();
-            $table->integer('class_id')->nullabel();
-            $table->integer('assign_subject_id')->nullabel();
-            $table->integer('exam_type_id')->nullabel();
-            $table->double('marks')->nullabel();
+            $table->integer('year_id')->nullable();
+            $table->integer('class_id')->nullable();
+            $table->integer('assign_subject_id')->nullable();
+            $table->integer('exam_type_id')->nullable();
+            $table->double('marks')->nullable();
             $table->timestamps();
         });
     }

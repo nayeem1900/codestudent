@@ -20,25 +20,44 @@
 
  <div class="col-md-4">
 
-     <div class="card" style="width: 18rem;">
-         <div class="card-header">
-             Notice Board
+         <div class="card" style="width: 18rem;">
+             <div class="card-header"style="background-color: darkgreen">
+                 Notice
+             </div>
+             <ul class="list-group list-group-flush">
+                 @foreach($notices as $key=>$notice)
+                     <li class="list-group-item">
+                         <a href="upload/result_images/{{($notice->t_download)}}" download="{{($notice->t_download)}}">
+                             <button type="button" class="btn btn-primary">
+                                 <i class="glyphicon glyphicon-download">
+                                 </i>{{$notice->title}}</button>
+                         </a>
+
+
+                     </li>
+
+                 @endforeach
+             </ul>
          </div>
-         <ul class="list-group list-group-flush">
-             <li class="list-group-item">An item</li>
-             <li class="list-group-item">A second item</li>
-             <li class="list-group-item">A third item</li>
-         </ul>
-     </div><br>
+         <br>
 
      <div class="card" style="width: 18rem;">
-         <div class="card-header">
+         <div class="card-header"style="background-color: darkgreen">
              Result
          </div>
          <ul class="list-group list-group-flush">
-             <li class="list-group-item">An item</li>
-             <li class="list-group-item">A second item</li>
-             <li class="list-group-item">A third item</li>
+             @foreach($results as $key=>$result)
+                 <li class="list-group-item">
+                     <a href="upload/result_images/{{($result->t_download)}}" download="{{($result->t_download)}}">
+                         <button type="button" class="btn btn-primary">
+                             <i class="glyphicon glyphicon-download">
+                             </i>{{$result->title}}</button>
+                     </a>
+
+
+                 </li>
+
+             @endforeach
          </ul>
      </div>
 

@@ -106,10 +106,10 @@ background: #EFEE03;border-radius: 30px; float: left; margin-right: 10px; width:
 
                         <div class="card-header">Notice</div>
 
-                            <marquee direction="up"> <h5 class="card-title">Admission on Going</h5>
-                                <a href=""> Everyone will come to school wear mask.</a><br>
-
-                              <a href="">পরিবারের কেউ অসুস্থ হলে শিক্ষককে জানান। </a>
+                            <marquee direction="up">
+                                @foreach($notices as $key=>$notice)
+                                   <a href=""> {{$notice->title}}<br></a>
+                                    @endforeach
                             </marquee>
 
 
@@ -121,8 +121,8 @@ background: #EFEE03;border-radius: 30px; float: left; margin-right: 10px; width:
                         </div>
                         <ul class="list-group list-group-flush link">
                             <a href="http://ibfbd.org/">   Islami Bank Foundation </a>
-                            <a href="https://dhakaeducationboard.gov.bd/">   Islami Bank Foundation </a>
-                            <li class="list-group-item">A third item</li>
+                            <a href="http://www.bnmc.gov.bd/">Bangladesh Nursing Council </a>
+                            <a href="https://www.islamibankbd.com/">Islami Bank Bangladesh Ltd</a>
                         </ul>
 
                 </div>

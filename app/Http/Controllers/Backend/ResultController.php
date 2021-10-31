@@ -41,7 +41,7 @@ class ResultController extends Controller
         }
         $data->save();
         session()->flash('success', ' Data save success');
-        return redirect()->route('results.view');
+        return redirect()->route('result.view');
     }
     public function edit($id)
     {
@@ -69,7 +69,7 @@ class ResultController extends Controller
         }
         $data->save();
         session()->flash('success', ' Data save success');
-        return redirect()->route('results.view');
+        return redirect()->route('result.view');
     }
 
 
@@ -81,7 +81,7 @@ class ResultController extends Controller
             unlink('upload/results_images/' .$result->t_download);
         }
         $result->delete();
-        return redirect()->route('results.view')->with('success', 'Data Deleted successfully');
+        return redirect()->route('result.view')->with('success', 'Data Deleted successfully');
     }
 
 

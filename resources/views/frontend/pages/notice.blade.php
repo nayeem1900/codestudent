@@ -1,28 +1,116 @@
 
 
 @extends('frontend.layouts.master')
-@section('content')
-
-    <section class="baner">
-
-        <img src="{{url('public/frontend/image/s1.png')}}" style="width:100%;">
-
-    </section>
-
-    <!--about us-->
-<div class="row">
+@section('content')<br>
+<section class="baner">
+    <div class="container">
 
 
-       <img src="{{url('public/frontend/image/admission_baner.jpg')}}" style="width:100%;">
+        <img src="{{url('frontend/image/addmission.jpg')}}" style="width:100%;height:auto">
 
 
 
 
+    </div>
+</section><br>
+<!--about us-->
 
-</div>
 
+<section class="table">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header"style="background-color: darkgreen">
+                        Facilities
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered border-primary" style="overflow-x:auto;">
+                            <tr>
+                                <th>Sl</th>
+                                <th>Notice Name</th>
+                                <th>Download</th>
+                            </tr>
+                            <tr>
+
+                                @foreach($notices as $key=>$notice)
+
+                                    <td>{{$key+1}}</td>
+                                    <td>{{$notice->title}}</td>
+                                    <td> <a href="upload/result_images/{{($notice->t_download)}}" download="{{($notice->t_download)}}">
+                                            <button type="button" class="btn btn-primary">
+                                                <i class="glyphicon glyphicon-download">
+                                                </i>Download</button>
+                                        </a>
+
+
+                                    </td>
+
+                            </tr>
+                            @endforeach
+
+                        </table>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header"style="background-color: darkgreen">
+                        Notice
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        @foreach($notices as $key=>$notice)
+                            <li class="list-group-item">
+                                <a href="upload/result_images/{{($notice->t_download)}}" download="{{($notice->t_download)}}">
+                                    <button type="button" class="btn btn-primary">
+                                        <i class="glyphicon glyphicon-download">
+                                        </i>{{$notice->title}}</button>
+                                </a>
+
+
+                            </li>
+
+                        @endforeach
+                    </ul>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header"style="background-color: darkgreen">
+                        Result
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        @foreach($results as $key=>$result)
+                            <li class="list-group-item">
+                                <a href="upload/result_images/{{($result->t_download)}}" download="{{($result->t_download)}}">
+                                    <button type="button" class="btn btn-primary">
+                                        <i class="glyphicon glyphicon-download">
+                                        </i>{{$result->title}}</button>
+                                </a>
+
+
+                            </li>
+
+                        @endforeach
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+</section>
 
 
 
 
 @endsection
+

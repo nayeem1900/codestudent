@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Manage About School</h1>
+                        <h1 class="m-0 text-dark">Manage Notice</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -39,14 +39,14 @@
                                 <h3>Result
 
 
-                                    <a class="btn btn-success float-right btn-sm" href="{{route('result.view')}}"><i class="fa fa-plus-circle"></i> Add Result</a>
+                                    <a class="btn btn-success float-right btn-sm" href="{{route('notice.view')}}"><i class="fa fa-plus-circle"></i> Add Notice</a>
 
                                 </h3>
 
                             </div><!-- /.card-header -->
                             <div class="card-body">
 
-                                <form method="POST" action="{{route('result.update',$editData->id)}}"enctype="multipart/form-data" >
+                                <form method="POST" action="{{route('notice.update',$editData->id)}}"enctype="multipart/form-data" >
                                     @csrf
                                     @include('backend.layouts.message')
                                     <div class="from-row">
@@ -62,7 +62,7 @@
                                         </div>
                                     </div>
                                     <div class="from-row">
-                                        <label for="Tender Name" class="col-md-4 col-form-label text-md-right">Result Name</label>
+                                        <label for="Tender Name" class="col-md-4 col-form-label text-md-right">Notice Name</label>
                                         <div class="from-group col-md-4">
                                             <input type="title" name="title" value="{{$editData->title}}" class="form-control"id="title">
                                         </div>

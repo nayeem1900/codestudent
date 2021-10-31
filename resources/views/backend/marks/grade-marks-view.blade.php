@@ -42,7 +42,7 @@
                             <div class="card-header">
                                 <h3>Grade Point List
                                      @if($access_action->grade_point_act)
-                                    {{--<a class="btn btn-success float-right btn-sm" href="{{route('marks.grade.add')}}"><i class="fa fa-plus-circle"></i> Add Grade Point</a>--}}
+                                    <a class="btn btn-success float-right btn-sm" href="{{route('marks.grade.add')}}"><i class="fa fa-plus-circle"></i> Add Grade Point</a>
                                     @endif
                                 </h3>
 
@@ -71,23 +71,23 @@
                                             <td>{{$key+1}}</td>
 
                                             <td>{{$value->grade_name}}</td>
-                                            <td>{{number_format((float)$value->grade_point,2)}}</td>
-                                            {{--<td>{{$value->grade_point}}</td>--}}
+                                           {{-- <td>{{number_format((float)$value->grade_point,2)}}</td>--}}
+                                            <td>{{$value->grade_point}}</td>
                                             <td>{{$value->start_marks}}</td>
                                             <td>{{$value->end_marks}}</td>
-                                            <td>{{number_format((float)$value->grade_point,2)}} - {{($value->start_point=5)?
+                                            {{--<td>{{number_format((float)$value->grade_point,2)}} - {{($value->start_point=5)?
                                             (number_format((float)$value->grade_point,2)):(number_format((float)$value->grade_point,+1,2)-
                                             (float)0.01)
 
                                             }}
 
 
-                                            </td>
-                                            {{--<td>{{$value->start_point}} - {{$value->end_point}}</td>--}}
+                                            </td>--}}
+                                            <td>{{$value->start_point}} - {{$value->end_point}}</td>
                                             <td>{{$value->remarks}}</td>
                                              @if($access_action->grade_point_act)
                                             <td>
-                                                {{--<a href="{{route('marks.grade.edit',$value->id)}}" class="btn btn-info btn-sm" title="Edit"> <i class="fa fa-edit"></i></a>--}}
+                                                <a href="{{route('marks.grade.edit',$value->id)}}" class="btn btn-info btn-sm" title="Edit"> <i class="fa fa-edit"></i></a>
 
                                             </td>
                                             @endif

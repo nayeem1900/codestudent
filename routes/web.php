@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'Website\PageController@index')->name('index');
 Route::get('details_about_us', 'Website\PageController@DetailAboutus')->name('detail_aboutus');
-Route::get('teacher_info', 'Website\PageController@teacherinfo')->name('teacherinfo');
+/*Route::get('teacher_info', 'Website\PageController@teacherinfo')->name('teacherinfo')*/;
 Route::get('contact', 'Website\PageController@contact')->name('contact');
 Route::get('admission/info', 'Website\PageController@admissionInfo')->name('admission');
 Route::get('course', 'Website\PageController@course')->name('course');
@@ -101,10 +101,19 @@ Route::group(['prefix'=>'profiles','middleware' => 'auth'], function(){
 });
 
 
-
-Route::prefix ('results')->group (function () {
+Route::group(['prefix'=>'notice','middleware' => 'auth'], function(){
     //admin-dashboard
-    Route::get('/view', 'Backend\ResultController@view')->name('results.view');
+    Route::get('/view', 'Backend\NoticeController@view')->name('notice.view');
+    Route::get('/add', 'Backend\NoticeController@add')->name('notice.add');
+    Route::post('/store', 'Backend\NoticeController@store')->name('notice.store');
+    Route::get('/edit/{id}', 'Backend\NoticeController@edit')->name('notice.edit');
+    Route::post('/update/{id}', 'Backend\NoticeController@update')->name('notice.update');
+    Route::post('/delete/{id}', 'Backend\NoticeController@delete')->name('notice.delete');
+});
+
+Route::group(['prefix'=>'result','middleware' => 'auth'], function(){
+    //admin-dashboard
+    Route::get('/view', 'Backend\ResultController@view')->name('result.view');
     Route::get('/add', 'Backend\ResultController@add')->name('result.add');
     Route::post('/store', 'Backend\ResultController@store')->name('result.store');
     Route::get('/edit/{id}', 'Backend\ResultController@edit')->name('result.edit');
@@ -112,7 +121,7 @@ Route::prefix ('results')->group (function () {
     Route::post('/delete/{id}', 'Backend\ResultController@delete')->name('result.delete');
 });
 
-Route::prefix ('logos')->group (function () {
+Route::group(['prefix'=>'logos','middleware' => 'auth'], function(){
     //admin-dashboard
     Route::get('/view', 'Backend\LogoController@view')->name('logos.view');
     Route::get('/add', 'Backend\LogoController@add')->name('logos.add');
@@ -124,7 +133,7 @@ Route::prefix ('logos')->group (function () {
 
 
 
-Route::prefix ('facilities')->group (function () {
+Route::group(['prefix'=>'facilities','middleware' => 'auth'], function(){
     Route::get('/view', 'Backend\FacilityController@view')->name('facilities.view');
     Route::get('/add', 'Backend\FacilityController@add')->name('facilities.add');
     Route::post('/store', 'Backend\FacilityController@store')->name('facilities.store');
@@ -133,7 +142,7 @@ Route::prefix ('facilities')->group (function () {
     Route::post('/delete/{id}', 'Backend\FacilityController@delete')->name('facilities.delete');
 });
 
-Route::prefix ('principals')->group (function () {
+Route::group(['prefix'=>'principals','middleware' => 'auth'], function(){
     Route::get('/view', 'Backend\PrincipalMessageController@view')->name('principals.view');
     Route::get('/add', 'Backend\PrincipalMessageController@add')->name('principals.add');
     Route::post('/store', 'Backend\PrincipalMessageController@store')->name('principals.store');
@@ -143,7 +152,7 @@ Route::prefix ('principals')->group (function () {
 });
 
 //About_school
-Route::prefix ('missions')->group (function () {
+Route::group(['prefix'=>'missions','middleware' => 'auth'], function(){
     Route::get('/view', 'Backend\MissionController@view')->name('missions.view');
     Route::get('/add', 'Backend\MissionController@add')->name('missions.add');
     Route::post('/store', 'Backend\MissionController@store')->name('missions.store');
@@ -154,7 +163,7 @@ Route::prefix ('missions')->group (function () {
 
 //About Us
 
-Route::prefix ('about_us')->group (function () {
+Route::group(['prefix'=>'about_us','middleware' => 'auth'], function(){
     //latest notice
     Route::get('/view', 'Backend\AboutusController@view')->name('about_us.view');
     Route::get('/add', 'Backend\AboutusController@add')->name('about_us.add');
@@ -412,8 +421,8 @@ Route::group(['prefix'=>'reports','middleware' => 'auth'], function(){
     Route::get('/attendence/get', 'Backend\Report\ProfitController@attendenceget')->name('reports.attendence.get');
 
 //All Student Result
-    Route::get('/result_images/view', 'Backend\Report\ProfitController@resultview')->name('reports.result_images.view');
-    Route::get('/resulte/get', 'Backend\Report\ProfitController@resultget')->name('reports.result_images.get');
+    Route::get('/result_images/view', 'Backend\Report\ProfitController@resultview')->name('reports.result.view');
+    Route::get('/resulte/get', 'Backend\Report\ProfitController@resultget')->name('reports.result.get');
 //All Student ID Card
     Route::get('/id-card/view', 'Backend\Report\ProfitController@idCardview')->name('reports.id-card.view');
     Route::get('/id-card/get', 'Backend\Report\ProfitController@idCardget')->name('reports.id-card.get');

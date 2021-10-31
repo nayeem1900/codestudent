@@ -33,7 +33,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style=" background-color: #99ccff">
                                 {{--<li><a class="dropdown-item" href="permit.html">Year Final Examination</a></li>--}}
-                                <li><a class="dropdown-item" href=""> Notice</a></li>
+                                <li><a class="dropdown-item" href="{{route('notice')}}"> Notice</a></li>
 
 
                                 <!--<li><hr class="dropdown-divider"></li>
@@ -62,7 +62,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style=" background-color: #99ccff">
                                 {{--<li><a class="dropdown-item" href="permit.html">Year Final Examination</a></li>--}}
-                                <li><a class="dropdown-item" href="{{route('teacherinfo')}}">Teacher Information </a></li>
+                                <li><a class="dropdown-item" href="">Teacher Information </a></li>
 
                                 <!--<li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>-->

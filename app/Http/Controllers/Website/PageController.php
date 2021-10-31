@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Website;
 use App\Http\Controllers\Controller;
 use App\Model\Facility;
 use App\Model\Mission;
+use App\Model\Notice;
 use App\Model\PrincipalMessage;
 use App\Model\Result;
 use App\User;
@@ -27,6 +28,7 @@ class PageController extends Controller
         $data['principal_message']=PrincipalMessage::first();
         $data['about_school']=Mission::first();
         $data['sliders']=Slider::all();
+        $data['notices']=Notice::all();
         return view ('frontend.layouts.home',$data);
 
 
@@ -36,6 +38,8 @@ class PageController extends Controller
 
     public function DetailAboutus(){
         $data['logo']=Logo::first();
+        $data['results']=Result::all();
+
         return view('frontend.pages.details-aboutus',$data);
     }
 
@@ -48,6 +52,8 @@ class PageController extends Controller
     }
 
     public function admissionInfo(){
+        $data['notices']=Notice::all();
+        $data['results']=Result::all();
         $data['logo']=Logo::first();
 
 
@@ -93,5 +99,15 @@ class PageController extends Controller
 
         return view('frontend.pages.contact',$data);
     }
+
+    public function notice(){
+        $data['logo']=Logo::first();
+        $data['results']=Result::all();
+        $data['notices']=Notice::all();
+
+
+        return view('frontend.pages.notice',$data);
+    }
+
 
 }
